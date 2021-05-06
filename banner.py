@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-placeholder = "*"
+import sys
+
+placeholder = " "
+title_text = ""
 range_len = 100
 border_len = 2
 border_text = " "
@@ -8,7 +11,12 @@ border_text = " "
 
 def showBanner(title="Empty"):
     showLine()
-    showTitle(title)
+    try:
+        title_text = str(title)
+        showTitle(title)
+    except TypeError as err:
+        printError("showTitle", err)
+        sys.exit("Exit")
     showLine()
 
 
@@ -40,3 +48,8 @@ def fillLineWith(symbol, range_end=0):
         line += symbol
 
     return line
+
+
+def printError(funcName, err_msg):
+    print("Error in function: ", funcName)
+    print("Error message: ", err_msg)
