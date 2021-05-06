@@ -3,9 +3,11 @@
 placeholder = "*"
 range_len = 100
 
-def showBanner(string = "Empty"):
-	showHead()
-	showTitle(string)
+
+def showBanner(title="Empty"):
+    showHead()
+    showTitle(title)
+
 
 def showHead():
     line = ""
@@ -14,6 +16,7 @@ def showHead():
 
     print(line)
 
-def showTitle(string):
-	title_len = len(string)
-	print("Title: ", string, " len: ", title_len)
+
+def showTitle(title):
+    title_len = len(title)
+    print("Title: ", title, " len: ", title_len)
