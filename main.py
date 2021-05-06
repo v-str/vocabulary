@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 
-import misc
+import banner
 
-misc.getWord()
+banner.showBanner()
