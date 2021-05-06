@@ -2,4 +2,4 @@
 
 import banner
 
-banner.showBanner()
+banner.showBanner("English Vocabulary")
