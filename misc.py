@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-
-def getWord():
-    word = input("word: ")
-    print("Your word: ", word)
+def helpText():
+    text = ("press:\n\n"
+            "start:      run program\n"
+            "set-config: set config\n")
+    return text
