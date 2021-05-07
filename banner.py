@@ -37,8 +37,7 @@ def showTitle(title):
     line_before = fillLineWith(placeholder, before_title_len)
     line_after = fillLineWith(placeholder, after_title_len)
 
-    final_title = (line_before, border_text, title,
-                   border_text, line_after)
+    final_title = (line_before + border_text + title + border_text + line_after)
     print(final_title)
 
 
