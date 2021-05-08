@@ -3,5 +3,5 @@
 import misc
 
 
-def showHelpMsg():
-    print(misc.helpText())
+def getUserInputString(text=""):
+    return str(input(text))
