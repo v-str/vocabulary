@@ -19,5 +19,7 @@ def runMainLoop():
         else:
             vocabulary.tryToAdd()
 
+    vocabulary.showContext()
+
 
 main()

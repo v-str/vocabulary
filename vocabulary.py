@@ -27,3 +27,10 @@ def addWord(text):
 
 def addToDict(first, second):
     cfg.app_dict[first] = second
+
+
+def showContext():
+    count = 1
+    for k, v in cfg.app_dict.items():
+        print(count, ") ", k, " - ", v)
+        count += 1
