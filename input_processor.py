@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+import cfg
+import msg
+import sys
+
 enter_sym = "#:"
 start_tuple = ("S", "s", "start", "Start")
 quit_tuple = ("Q", "q", "quit", "Quit")
@@ -15,3 +19,11 @@ def isUserWantToStart(user_input):
 
 def isUserWantToQuit(user_input):
     return user_input in quit_tuple
+
+
+def start():
+    user_input = getUserInputString()
+    if isUserWantToStart(user_input):
+        pass
+    elif isUserWantToQuit(user_input):
+        cfg.program_is_running = False
