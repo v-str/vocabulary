@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 program_is_running = True
+ready_to_run_vocabulary = False
 program_name = "English Vocabulary"
 
 

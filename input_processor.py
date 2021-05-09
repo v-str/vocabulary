@@ -21,9 +21,9 @@ def isUserWantToQuit(user_input):
     return user_input in quit_tuple
 
 
-def start():
+def acquireLaunchConfirmation():
     user_input = getUserInputString()
     if isUserWantToStart(user_input):
-        pass
+        cfg.ready_to_run_vocabulary = True
     elif isUserWantToQuit(user_input):
         cfg.program_is_running = False
