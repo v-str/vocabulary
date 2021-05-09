@@ -10,8 +10,6 @@ def main():
     msg.showBanner(cfg.program_name)
     msg.showBanner(cfg.helpText())
     runMainLoop()
-    for key, value in cfg.app_dict.items():
-        print(key, " - ", value)
 
 
 def runMainLoop():
@@ -19,7 +17,7 @@ def runMainLoop():
         if not cfg.ready_to_run_vocabulary:
             ipp.acquireLaunchConfirmation()
         else:
-            vocabulary.addWord()
+            vocabulary.tryToAdd()
 
 
 main()

@@ -3,10 +3,12 @@
 program_is_running = True
 ready_to_run_vocabulary = False
 program_name = "English Vocabulary"
-enter_sym = "#:"
+enter_sym = "#: "
 start_tuple = ("S", "s", "start", "Start")
 quit_tuple = ("Q", "q", "quit", "Quit")
 app_dict = dict()
+raw_word = str("raw")
+tr_word = str("tr")
 
 
 def helpText():

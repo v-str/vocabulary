@@ -6,7 +6,7 @@ import sys
 
 
 def getUserInputString(prefix=""):
-    return str(input(prefix + cfg.enter_sym))
+    return str(input(prefix))
 
 
 def isUserWantToStart(user_input):
@@ -18,7 +18,7 @@ def isUserWantToQuit(user_input):
 
 
 def acquireLaunchConfirmation():
-    user_input = getUserInputString()
+    user_input = getUserInputString(cfg.enter_sym)
     if isUserWantToStart(user_input):
         cfg.ready_to_run_vocabulary = True
     elif isUserWantToQuit(user_input):

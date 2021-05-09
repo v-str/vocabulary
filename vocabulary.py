@@ -5,11 +5,25 @@ import msg
 import input_processor as ipp
 
 
-def addWord():
-    raw_word = ipp.getUserInputString("word ")
-    if ipp.isUserWantToQuit(raw_word):
-        cfg.program_is_running = False
-        print("Quit")
+def tryToAdd():
+    cfg.raw_word = addWord("word: ")
+
+    if not ipp.isUserWantToQuit(cfg.raw_word):
+        cfg.tr_word = addWord("<" + cfg.raw_word + "> translation: ")
+    else:
         return
-    tr_word = ipp.getUserInputString("translation ")
-    cfg.app_dict[raw_word] = tr_word
+
+    if not ipp.isUserWantToQuit(cfg.tr_word):
+        addToDict(cfg.raw_word, cfg.tr_word)
+
+
+def addWord(text):
+    word = ipp.getUserInputString(text)
+    if ipp.isUserWantToQuit(word):
+        cfg.program_is_running = False
+
+    return word
+
+
+def addToDict(first, second):
+    cfg.app_dict[first] = second
