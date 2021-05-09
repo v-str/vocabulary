@@ -16,6 +16,7 @@ def runMainLoop():
         if not cfg.ready_to_run_vocabulary:
             ipp.acquireLaunchConfirmation()
         else:
+            pass
             # vocabulary.addWord()
 
 
