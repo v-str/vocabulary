@@ -50,6 +50,10 @@ def fillLineWith(symbol, range_end=0):
     return line
 
 
-def printError(funcName, err_msg):
+def printErrorInFunc(funcName, err_msg):
     print("Error in function: ", funcName)
     print("Error message: ", err_msg)
+
+
+def printError(err_msg):
+    print(err_msg)
