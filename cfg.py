@@ -6,6 +6,7 @@ program_name = "English Vocabulary"
 enter_sym = "#:"
 start_tuple = ("S", "s", "start", "Start")
 quit_tuple = ("Q", "q", "quit", "Quit")
+app_dict = dict()
 
 
 def helpText():

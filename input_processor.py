@@ -5,8 +5,8 @@ import msg
 import sys
 
 
-def getUserInputString():
-    return str(input(cfg.enter_sym))
+def getUserInputString(prefix=""):
+    return str(input(prefix + cfg.enter_sym))
 
 
 def isUserWantToStart(user_input):
