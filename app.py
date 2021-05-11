@@ -4,6 +4,7 @@ import msg
 import cfg
 import input_processor as ipp
 import vocabulary
+import file_worker
 
 
 def main():
@@ -20,6 +21,7 @@ def runMainLoop():
             vocabulary.tryToAdd()
 
     vocabulary.showContext()
+    file_worker.writeToFile(cfg.app_dict)
 
 
 main()
