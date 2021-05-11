@@ -30,7 +30,8 @@ def addToDict(first, second):
 
 
 def showContext():
-    count = 1
-    for k, v in cfg.app_dict.items():
-        print(count, ") ", k, " - ", v)
-        count += 1
+    start = 1
+    # function enumerate let me enumerate my dictionary automatically
+    # start - counter for beaty print
+    for enum, key in enumerate(cfg.app_dict, start):
+        print(enum, ") ", key, " - ", cfg.app_dict[key])
