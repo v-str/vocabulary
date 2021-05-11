@@ -13,7 +13,10 @@ tr_word = str("tr")
 
 
 def helpText():
-    text = ("\tpress '<A-a>' to add word, "
+    text = ("\npress:\n\n"
+            "'<A-a>' to add word\n"
+            "'<S-s>' to show vocabulary\n"
+            "'<H-h>' to view help\n"
             "'<Q-q>' for quit program\n\n")
     return text
 

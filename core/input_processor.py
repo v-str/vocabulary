@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
-import cfg
-import msg
-import sys
-
+from core import cfg
+from core import msg
 
 def getUserInputString(prefix=""):
     return str(input(prefix))

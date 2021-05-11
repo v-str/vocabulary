@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import cfg
-import msg
-import input_processor as ipp
+from core import cfg
+from core import msg
+from core import input_processor as ipp
 
 
 def tryToAdd():
@@ -32,6 +32,6 @@ def addToDict(first, second):
 def showContext():
     start = 1
     # function enumerate let me enumerate my dictionary automatically
-    # start - counter for beaty print
+    # start - counter for beauty print
     for enum, key in enumerate(cfg.app_dict, start):
         print(enum, ") ", key, " - ", cfg.app_dict[key])

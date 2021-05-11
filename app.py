@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
-import msg
-import cfg
-import input_processor as ipp
-import vocabulary
-import file_worker
+from core import msg
+from core import cfg
+from core import input_processor as ipp
+from core import vocabulary
+from core import file_worker
 
 
 def main():
-    msg.showBanner(cfg.program_name)
-    msg.showBanner(cfg.helpText())
-    runMainLoop()
+    msg.showBanner(cfg.program_name, "#")
+    # msg.showBanner(cfg.helpText())
+    # runMainLoop()
 
 
 def runMainLoop():

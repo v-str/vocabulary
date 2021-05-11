@@ -4,28 +4,27 @@ import sys
 
 range_len = 100
 border_len = 2
-placeholder = " "
 border_text = " "
 title_text = ""
 
 
-def showBanner(title="Empty"):
-    showLine()
+def showBanner(title="Empty", placeholder=" "):
+    showLine(placeholder)
     try:
         title_text = str(title)
-        showTitle(title)
+        showTitle(title, placeholder)
     except TypeError as err:
         printError("showTitle", err)
         sys.exit("Exit")
-    showLine()
+    showLine(placeholder)
 
 
-def showLine():
+def showLine(placeholder):
     line = fillLineWith(placeholder, range_len)
     print(line)
 
 
-def showTitle(title):
+def showTitle(title, placeholder):
     title_len = len(title)
     total = range_len - title_len - border_len
     before_title_len = round(total / 2)
@@ -50,10 +49,5 @@ def fillLineWith(symbol, range_end=0):
     return line
 
 
-def printErrorInFunc(funcName, err_msg):
-    print("Error in function: ", funcName)
-    print("Error message: ", err_msg)
-
-
-def printError(err_msg):
-    print(err_msg)
+def showText(text):
+    print(text)
