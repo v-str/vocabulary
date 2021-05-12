@@ -4,8 +4,10 @@ program_is_running = True
 ready_to_run_vocabulary = False
 program_name = "English Vocabulary"
 enter_sym = "#: "
-add_tuple = ("A", "a")
-quit_tuple = ("Q", "q")
+add_t = ("A", "a")
+show_t = ("S", "s")
+help_t = ("H", "h")
+quit_t = ("Q", "q")
 placeholder = "-"
 
 app_dict = dict()
@@ -17,7 +19,7 @@ def helpText():
     text = ("'<A-a>' to add word\n"
             "'<S-s>' to show vocabulary\n"
             "'<H-h>' to view help\n"
-            "'<Q-q>' for quit program\n\n")
+            "'<Q-q>' for quit program\n")
     return text
 
 
