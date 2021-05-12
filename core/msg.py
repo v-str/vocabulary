@@ -2,21 +2,21 @@
 
 import sys
 
+from core import cfg
+
 range_len = 100
 border_len = 2
 border_text = " "
-title_text = ""
 
 
-def showBanner(title="Empty", placeholder=" "):
-    showLine(placeholder)
+def showBanner():
+    showLine(cfg.placeholder)
     try:
-        title_text = str(title)
-        showTitle(title, placeholder)
+        showTitle(cfg.program_name, cfg.placeholder)
     except TypeError as err:
         printError("showTitle", err)
         sys.exit("Exit")
-    showLine(placeholder)
+    showLine(cfg.placeholder)
 
 
 def showLine(placeholder):
@@ -49,5 +49,5 @@ def fillLineWith(symbol, range_end=0):
     return line
 
 
-def showText(text):
-    print(text)
+def showHelp():
+    print(cfg.helpText())

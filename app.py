@@ -8,9 +8,9 @@ from core import file_worker
 
 
 def main():
-    msg.showBanner(cfg.program_name, "#")
-    # msg.showBanner(cfg.helpText())
-    # runMainLoop()
+    msg.showBanner()
+    msg.showHelp()
+    # mainLoop()
 
 
 def runMainLoop():
