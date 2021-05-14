@@ -24,5 +24,5 @@ def helpText():
 
 
 def errorText():
-    text = ("Something is wrong\n")
+    text = ("something is wrong, press '<H-h>' to view available commands")
     return text

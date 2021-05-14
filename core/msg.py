@@ -51,3 +51,7 @@ def fillLineWith(symbol, range_end=0):
 
 def showHelp():
     print(cfg.helpText())
+
+
+def showErrorMsg():
+    print(cfg.errorText())

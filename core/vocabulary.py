@@ -3,6 +3,7 @@
 from core import cfg
 from core import msg
 from core import input_processor as ipp
+from core import file_worker as fw
 
 
 def tryToAdd():

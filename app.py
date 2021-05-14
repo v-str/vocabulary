@@ -6,7 +6,6 @@ from core import msg
 from core import cfg
 from core import input_processor as ipp
 from core import vocabulary as voc
-from core import file_worker as fw
 
 
 def main():
@@ -20,12 +19,14 @@ def runMainLoop():
         user_input = ipp.getUserInputString(cfg.enter_sym)
         if ipp.isUserWantToQuit(user_input):
             sys.exit()
-        if ipp.isUserWantToAdd(user_input):
+        elif ipp.isUserWantToAdd(user_input):
             voc.tryToAdd()
-        if ipp.isUserWantToShow(user_input):
+        elif ipp.isUserWantToShow(user_input):
             voc.showContext()
-        if ipp.isUserWantToViewHelp(user_input):
+        elif ipp.isUserWantToViewHelp(user_input):
             msg.showHelp()
+        else:
+            msg.showErrorMsg()
 
 
 main()
