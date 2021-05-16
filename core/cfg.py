@@ -7,6 +7,8 @@ enter_sym = "#: "
 add_t = ("A", "a")
 show_t = ("S", "s")
 help_t = ("H", "h")
+write_t = ("W", "w")
+load_t = ("L", "l")
 quit_t = ("Q", "q")
 placeholder = "-"
 
@@ -16,10 +18,12 @@ tr_word = str("tr")
 
 
 def helpText():
-    text = ("'<A-a>' to add word\n"
-            "'<S-s>' to show vocabulary\n"
-            "'<H-h>' to view help\n"
-            "'<Q-q>' for quit program\n")
+    text = ("'<A-a>' add word\n"
+            "'<S-s>' show vocabulary\n"
+            "'<H-h>' view help\n"
+            "'<W-w>' write to file <voc.txt>\n"
+            "'<L-l>' load from file <voc.txt>\n"
+            "'<Q-q>' quit program\n")
     return text
 
 

@@ -22,3 +22,11 @@ def isUserWantToViewHelp(user_input):
 
 def isUserWantToQuit(user_input):
     return user_input in cfg.quit_t
+
+
+def isUserWantToWriteToFile(user_input):
+    return user_input in cfg.write_t
+
+
+def isUserWantToLoadDict(user_input):
+    return user_input in cfg.load_t

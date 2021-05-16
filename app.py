@@ -6,6 +6,7 @@ from core import msg
 from core import cfg
 from core import input_processor as ipp
 from core import vocabulary as voc
+from core import file_worker as fw
 
 
 def main():
@@ -25,6 +26,11 @@ def runMainLoop():
             voc.showContext()
         elif ipp.isUserWantToViewHelp(user_input):
             msg.showHelp()
+        elif ipp.isUserWantToWriteToFile(user_input):
+            print("Write to file")
+            fw.writeToFile()
+        elif ipp.isUserWantToLoadDict(user_input):
+            print("Load from file")
         else:
             msg.showErrorMsg()
 
