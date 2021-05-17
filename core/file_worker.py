@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import pathlib
+import os
+
+from core import cfg
 
 filename = "voc.txt"
 
@@ -9,14 +12,15 @@ def writeToFile():
     f = open(filename, "a+")
 
     fpath = str(pathlib.Path(filename).parent.absolute())
-    ffilename = fpath + "/" + filename
+    ff = fpath + "/" + filename
 
-    print("ffilename: ", ffilename)
+    # if os.stat(ff).st_size == 0:
 
-    #f.write("Vocabulary program\n")
-
-    # for count, key in enumerate(d, 1):
-    #    line = str(count) + ") " + str(key) + " - " + str(d[key]) + "\n"
-    #    f.write(line)
+    for count, key in enumerate(cfg.app_dict, 1):
+        line = str(count) + ") " + str(key) + " - " + \
+            str(cfg.app_dict[key]) + "\n"
+        f.write(line)
 
     f.close()
+
+    print("File ", filename, " written")
