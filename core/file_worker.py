@@ -11,7 +11,7 @@ filename = "voc.txt"
 
 def writeToFile():
 
-    if not cfg.is_word_added:
+    if __isNothingToWrite__():
         msg.showEmptyDictMsg()
         return
 
@@ -33,3 +33,9 @@ def writeToFile():
     f.close()
 
     print("File ", filename, " written")
+
+
+def __isNothingToWrite__():
+    if not cfg.is_word_added:
+        return True
+    return False
