@@ -55,3 +55,7 @@ def showHelp():
 
 def showErrorMsg():
     print(cfg.errorText())
+
+
+def showEmptyDictMsg():
+    print(cfg.emptyDictText())

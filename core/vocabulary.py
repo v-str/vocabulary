@@ -28,6 +28,7 @@ def addWord(text):
 
 def addToDict(first, second):
     cfg.app_dict[first] = second
+    cfg.is_word_added = True
 
 
 def showContext():

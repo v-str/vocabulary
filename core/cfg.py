@@ -15,6 +15,7 @@ placeholder = "-"
 app_dict = dict()
 raw_word = str("raw")
 tr_word = str("tr")
+is_word_added = False
 
 
 def helpText():
@@ -29,4 +30,9 @@ def helpText():
 
 def errorText():
     text = ("something is wrong, press '<H-h>' to view available commands")
+    return text
+
+
+def emptyDictText():
+    text = ("dictionary is empty")
     return text

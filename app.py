@@ -27,7 +27,6 @@ def runMainLoop():
         elif ipp.isUserWantToViewHelp(user_input):
             msg.showHelp()
         elif ipp.isUserWantToWriteToFile(user_input):
-            print("Write to file")
             fw.writeToFile()
         elif ipp.isUserWantToLoadDict(user_input):
             print("Load from file")
