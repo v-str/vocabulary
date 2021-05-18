@@ -15,12 +15,14 @@ def writeToFile():
         msg.showEmptyDictMsg()
         return
 
-    f = open(filename, "a+")
+    f = open(filename, "ra+")
 
     fpath = str(pathlib.Path(filename).parent.absolute())
     ff = fpath + "/" + filename
 
-    # if os.stat(ff).st_size == 0:
+    if os.stat(ff).st_size != 0:
+        pass
+        # count lines and save line number
 
     for count, key in enumerate(cfg.app_dict, 1):
         line = str(count) + ") " + str(key) + " - " + \
