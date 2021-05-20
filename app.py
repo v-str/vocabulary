@@ -29,7 +29,7 @@ def runMainLoop():
         elif ipp.isUserWantToWriteToFile(user_input):
             fw.writeToFile()
         elif ipp.isUserWantToLoadDict(user_input):
-            print("Load from file")
+            fw.loadFromFile()
         else:
             msg.showErrorMsg()
 

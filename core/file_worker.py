@@ -6,7 +6,7 @@ import os
 from core import cfg
 from core import msg
 
-filename = "voc.txt"
+filename = "voc.text"
 
 
 def writeToFile():
@@ -15,7 +15,7 @@ def writeToFile():
         msg.showEmptyDictMsg()
         return
 
-    strings_len = __readFile__()
+    temp_list, strings_len = __readFile__()
 
     f = open(filename, "a+")
 
@@ -30,6 +30,22 @@ def writeToFile():
     f.close()
 
     print("File ", filename, " written")
+
+
+def loadFromFile():
+    temp_list, strings_len = __readFile__()
+    if len(temp_list) == 0:
+        print("Nothing to load")
+    else:
+        strings_len = len(cfg.app_dict)
+        print("len of dict: ", strings_len)
+        # parse strings from temp list
+        # for line in temp_list:
+        # temp_line = line
+        # find number before ')' symbol
+        # change that symbol to 'strings_len + 1'
+        # find KEY after ')' sym but before '-' symbol
+        # find VALUE after '-' symbol
 
 
 def __isNothingToWrite__():
@@ -48,15 +64,13 @@ def __readFile__():
         ff = fpath + "/" + filename
 
         if os.stat(ff).st_size != 0:
-            print("File is not empty.")
             # count lines and save line number
             strings_len = len(file_list) + 1
-            print("len: ", strings_len)
             f.close()
         else:
             f.close()
 
-        return strings_len
+        return file_list, strings_len
 
     except FileNotFoundError as err:
         print("file not exist, nothing to read")
