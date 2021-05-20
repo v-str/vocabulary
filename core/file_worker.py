@@ -2,6 +2,7 @@
 
 import pathlib
 import os
+import re
 
 from core import cfg
 from core import msg
@@ -16,6 +17,7 @@ def writeToFile():
         return
 
     temp_list, strings_len = __readFile__()
+    strings_len += 1
 
     f = open(filename, "a+")
 
@@ -37,15 +39,9 @@ def loadFromFile():
     if len(temp_list) == 0:
         print("Nothing to load")
     else:
-        strings_len = len(cfg.app_dict)
-        print("len of dict: ", strings_len)
-        # parse strings from temp list
-        # for line in temp_list:
-        # temp_line = line
-        # find number before ')' symbol
-        # change that symbol to 'strings_len + 1'
-        # find KEY after ')' sym but before '-' symbol
-        # find VALUE after '-' symbol
+        for line in temp_list:
+            newline = re.sub(r"\d+\) ", '', line)
+            print(newline)
 
 
 def __isNothingToWrite__():
@@ -65,7 +61,7 @@ def __readFile__():
 
         if os.stat(ff).st_size != 0:
             # count lines and save line number
-            strings_len = len(file_list) + 1
+            strings_len = len(file_list)
             f.close()
         else:
             f.close()
