@@ -29,7 +29,7 @@ def runMainLoop():
             sys.exit()
         elif ipp.isUserWantToAdd(user_input):
             voc.tryToAdd()
-        elif ipp.isUserWantToShow(user_input):
+        elif ipp.isUserWantToView(user_input):
             voc.showContext()
         elif ipp.isUserWantToViewHelp(user_input):
             msg.showHelp()

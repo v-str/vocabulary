@@ -5,7 +5,7 @@ ready_to_run_vocabulary = False
 program_name = "English Vocabulary"
 enter_sym = "#: "
 add_t = ("A", "a")
-show_t = ("S", "s")
+view_t = ("V", "v")
 help_t = ("H", "h")
 write_t = ("W", "w")
 load_t = ("L", "l")
@@ -20,7 +20,7 @@ is_word_added = False
 
 def helpText():
     text = ("'<A-a>' add word\n"
-            "'<S-s>' show vocabulary\n"
+            "'<V-v>' view vocabulary\n"
             "'<H-h>' view help\n"
             "'<W-w>' write to file <voc.txt>\n"
             "'<L-l>' load from file <voc.txt>\n"

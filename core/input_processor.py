@@ -12,8 +12,8 @@ def isUserWantToAdd(user_input):
     return user_input in cfg.add_t
 
 
-def isUserWantToShow(user_input):
-    return user_input in cfg.show_t
+def isUserWantToView(user_input):
+    return user_input in cfg.view_t
 
 
 def isUserWantToViewHelp(user_input):
