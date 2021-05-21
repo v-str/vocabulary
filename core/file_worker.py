@@ -34,7 +34,10 @@ def writeToFile():
     print("File ", filename, " written")
 
 
-def loadFromFile():
+def loadFromFile(need_to_clean=False):
+    if need_to_clean:
+        cfg.app_dict.clear()
+
     temp_list, strings_len = __readFile__()
     temp_dict = dict()
     if len(temp_list) == 0:

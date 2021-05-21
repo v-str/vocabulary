@@ -59,3 +59,9 @@ def showErrorMsg():
 
 def showEmptyDictMsg():
     print(cfg.emptyDictText())
+
+
+def showPreLoadMsg():
+    print("Your current vocabulary contain some data.\n"
+          "If you load vocabulary from file, current vocabulary will be lost.\n"
+          "Proceed?\n")

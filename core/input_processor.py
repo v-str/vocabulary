@@ -30,3 +30,12 @@ def isUserWantToWriteToFile(user_input):
 
 def isUserWantToLoadDict(user_input):
     return user_input in cfg.load_t
+
+
+def isUserWantToLoadAnyway():
+    while True:
+        user_input = input("Y,n: ")
+        if user_input in ('Y', 'y'):
+            return True
+        elif user_input in ('N', 'n'):
+            return False

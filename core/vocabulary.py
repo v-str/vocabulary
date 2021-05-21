@@ -37,3 +37,7 @@ def showContext():
     # start - counter for beauty print
     for enum, key in enumerate(cfg.app_dict, start):
         print(enum, ") ", key, " - ", cfg.app_dict[key])
+
+
+def vocabularyIsEmpty():
+    return len(cfg.app_dict) == 0

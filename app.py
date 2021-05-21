@@ -14,6 +14,13 @@ def main():
     msg.showHelp()
     runMainLoop()
 
+# q - quit
+# a - add
+# v - view
+# h - help
+# w - write to file
+# l - load from file
+
 
 def runMainLoop():
     while cfg.program_is_running:
@@ -29,7 +36,12 @@ def runMainLoop():
         elif ipp.isUserWantToWriteToFile(user_input):
             fw.writeToFile()
         elif ipp.isUserWantToLoadDict(user_input):
-            fw.loadFromFile()
+            if not voc.vocabularyIsEmpty():
+                msg.showPreLoadMsg()
+                if ipp.isUserWantToLoadAnyway():
+                    fw.loadFromFile(True)
+            else:
+                fw.loadFromFile()
         else:
             msg.showErrorMsg()
 
