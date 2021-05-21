@@ -32,11 +32,15 @@ def addToDict(first, second):
 
 
 def showContext():
-    start = 1
     # function enumerate let me enumerate my dictionary automatically
     # start - counter for beauty print
-    for enum, key in enumerate(cfg.app_dict, start):
+    counter = 1
+    for enum, key in enumerate(cfg.app_dict, counter):
         print(enum, ") ", key, " - ", cfg.app_dict[key])
+        counter += 1
+    if cfg.is_dict_loaded:
+        for enum, key in enumerate(cfg.app_dict_loaded, counter):
+            print(enum, ") ", key, " - ", cfg.app_dict_loaded[key])
 
 
 def vocabularyIsEmpty():

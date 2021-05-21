@@ -23,6 +23,7 @@ def writeToFile():
         f.write(line)
 
     cfg.app_dict.clear()
+    cfg.app_dict_loaded.clear()
     cfg.is_word_added = False
 
     f.close()
@@ -30,18 +31,16 @@ def writeToFile():
     print("File ", filename, " written")
 
 
-def loadFromFile(need_to_clean=False):
-    if need_to_clean:
-        cfg.app_dict.clear()
+def loadFromFile():
+    cfg.app_dict_loaded.clear()
 
     temp_list = __readFile__()
-    temp_dict = dict()
 
     for line in temp_list:
         newstr = line.strip().split(" - ")
-        temp_dict[newstr[0]] = newstr[1]
+        cfg.app_dict_loaded[newstr[0]] = newstr[1]
 
-    cfg.app_dict.update(temp_dict)
+    cfg.is_dict_loaded = True
     print("Vocabulary loaded")
 
 

@@ -13,9 +13,11 @@ quit_t = ("Q", "q")
 placeholder = "-"
 
 app_dict = dict()
+app_dict_loaded = dict()
 raw_word = str("raw")
 tr_word = str("tr")
 is_word_added = False
+is_dict_loaded = False
 
 
 def helpText():

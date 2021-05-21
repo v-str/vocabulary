@@ -36,12 +36,7 @@ def runMainLoop():
         elif ipp.isUserWantToWriteToFile(user_input):
             fw.writeToFile()
         elif ipp.isUserWantToLoadDict(user_input):
-            if not voc.vocabularyIsEmpty():
-                msg.showPreLoadMsg()
-                if ipp.isUserWantToLoadAnyway():
-                    fw.loadFromFile(True)
-            else:
-                fw.loadFromFile()
+            fw.loadFromFile()
         else:
             msg.showErrorMsg()
 
