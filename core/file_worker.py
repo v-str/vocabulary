@@ -4,10 +4,12 @@ import pathlib
 import os
 import re
 
-from core import cfg
-from core import msg
+from core import cfg, msg
 
 filename = "voc.text"
+folderpath = "/.local/share/vocabulary"
+fulldirpath = os.path.expanduser("~") + folderpath
+filepath = fulldirpath + "/" + filename
 
 
 def writeToFile():
@@ -16,7 +18,10 @@ def writeToFile():
         msg.showEmptyDictMsg()
         return
 
-    f = open(filename, "a+")
+    if not os.path.exists(fulldirpath):
+        os.makedirs(fulldirpath)
+
+    f = open(filepath, "a+")
 
     for key in cfg.app_dict:
         line = str(key) + " - " + str(cfg.app_dict[key]) + "\n"
@@ -51,8 +56,9 @@ def __isNothingToWrite__():
 
 
 def __readFile__():
+
     try:
-        f = open(filename, "r")
+        f = open(filepath, "r")
         file_list = f.readlines()
         f.close()
         return file_list
