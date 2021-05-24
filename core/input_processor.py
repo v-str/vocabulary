@@ -2,8 +2,8 @@
 
 import os
 
-from core import cfg
-from core import msg
+import core.cfg as cfg
+import core.msg as msg
 
 
 def getUserInputString(prefix=""):

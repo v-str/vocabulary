@@ -2,24 +2,17 @@
 
 import sys
 
-from core import msg
-from core import cfg
-from core import input_processor as ipp
-from core import vocabulary as voc
-from core import file_worker as fw
+import core.msg as msg
+import core.cfg as cfg
+import core.input_processor as ipp
+import core.vocabulary as voc
+import core.file_worker as fw
 
 
 def main():
     msg.showBanner()
     msg.showHelp()
     runMainLoop()
-
-# q - quit
-# a - add
-# v - view
-# h - help
-# w - write to file
-# l - load from file
 
 
 def runMainLoop():
