@@ -39,14 +39,17 @@ def writeToFile():
 def loadFromFile():
     cfg.app_dict_loaded.clear()
 
-    temp_list = __readFile__()
+    try:
+        temp_list = __readFile__()
 
-    for line in temp_list:
-        newstr = line.strip().split(" - ")
-        cfg.app_dict_loaded[newstr[0]] = newstr[1]
+        for line in temp_list:
+            newstr = line.strip().split(" - ")
+            cfg.app_dict_loaded[newstr[0]] = newstr[1]
 
-    cfg.is_dict_loaded = True
-    print("Vocabulary loaded")
+        cfg.is_dict_loaded = True
+        print("Vocabulary loaded")
+    except FileNotFoundError:
+        print("File " + filename + " not exist")
 
 
 def __isNothingToWrite__():
@@ -64,6 +67,6 @@ def __readFile__():
         return file_list
 
     except FileNotFoundError as err:
-        print("File not exist")
+        raise FileNotFoundError
 
     return list()
