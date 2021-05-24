@@ -10,6 +10,7 @@ help_t = ("H", "h")
 write_t = ("W", "w")
 load_t = ("L", "l")
 quit_t = ("Q", "q")
+clear_t = ("C", "c")
 placeholder = "-"
 
 app_dict = dict()
@@ -26,7 +27,8 @@ def helpText():
             "'<H-h>' view help\n"
             "'<W-w>' write to file <voc.txt>\n"
             "'<L-l>' load from file <voc.txt>\n"
-            "'<Q-q>' quit program\n")
+            "'<C-c>' clear screen\n"
+            "'<Q-q>' quit program")
     return text
 
 

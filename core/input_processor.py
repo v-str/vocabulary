@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import os
+
 from core import cfg
 from core import msg
 
@@ -39,3 +41,11 @@ def isUserWantToLoadAnyway():
             return True
         elif user_input in ('N', 'n'):
             return False
+
+
+def isUserWantToClearScreen(user_input):
+    return user_input in cfg.clear_t
+
+
+def clearScreen():
+    os.system('clear')

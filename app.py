@@ -37,6 +37,8 @@ def runMainLoop():
             fw.writeToFile()
         elif ipp.isUserWantToLoadDict(user_input):
             fw.loadFromFile()
+        elif ipp.isUserWantToClearScreen(user_input):
+            ipp.clearScreen()
         else:
             msg.showErrorMsg()
 
