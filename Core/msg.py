@@ -2,7 +2,7 @@
 
 import sys
 
-import core.cfg as cfg
+import Core.cfg as cfg
 
 range_len = 100
 border_len = 2

@@ -2,11 +2,11 @@
 
 import sys
 
-import core.msg as msg
-import core.cfg as cfg
-import core.input_processor as ipp
-import core.vocabulary as voc
-import core.file_worker as fw
+import Core.msg as msg
+import Core.cfg as cfg
+import Core.input_processor as ipp
+import Core.vocabulary as voc
+import Core.file_worker as fw
 
 
 def main():

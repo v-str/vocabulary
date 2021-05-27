@@ -4,8 +4,8 @@ import pathlib
 import os
 import re
 
-import core.cfg as cfg
-import core.msg as msg
+import Core.cfg as cfg
+import Core.msg as msg
 
 filename = "voc.text"
 folderpath = "/.local/share/vocabulary"

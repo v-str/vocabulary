@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-import core.cfg as cfg
-import core.msg as msg
-import core.input_processor as ipp
-import core.file_worker as fw
+import Core.cfg as cfg
+import Core.msg as msg
+import Core.input_processor as ipp
+import Core.file_worker as fw
 
 
 def tryToAdd():
